@@ -1,0 +1,13 @@
+--------------------MERN PROJECT------------------------------
+1. create 2 folder
+	- client
+	- server
+2. Inside client folder > npx create-react-app .
+3. Inside server folder > npm init -y (-y flag so that it does not ask any question)
+4. Install express:
+	- npm i express
+5. Create server.js file
+6. create 
+7. Install mongoose
+8. Make UI transaction form
+8. npm i cors.
