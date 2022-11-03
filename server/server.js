@@ -1,19 +1,22 @@
 import express from "express";
-import mongoose from "mongoose";
+import connectDb from "./database/mongodb.js"
 import cors from 'cors';
+import bodyParser from "body-parser";
+import TransactionRoutes from './routes/transaction.js'
 const app = express();
 
 app.use(cors())
 
+app.use(bodyParser.json())
+
+app.use('/transaction',TransactionRoutes)
+
 const PORT = process.env.PORT || 7000;
 
-
+connectDb();
 app.get("/", (req, resp) => {
   resp.send("hello");
 });
-
-await mongoose.connect("mongodb://127.0.0.1:27017")
-console.log("Connection extablished");
 
 app.listen(PORT, () => {
   console.log("Server is running at " + PORT);

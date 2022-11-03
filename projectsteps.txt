@@ -10,4 +10,9 @@
 6. create 
 7. Install mongoose
 8. Make UI transaction form
-8. npm i cors.
+9. npm i cors.
+10.npm i body-parser
+11. Now need to store data in MongoDB:
+---- Use Mongoose-----
+1. first create Schema: 
+	- new folder models > transaction.js
